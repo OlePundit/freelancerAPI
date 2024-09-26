@@ -3,7 +3,7 @@ import pandas as pd
 
 # Fetch projects data
 url = "https://www.freelancer.com/api/projects/0.1/projects/active/?compact=&limit=10&min_avg_hourly_rate=8&min_avg_price=25&job_details=true&query=web%20developer&jobs%5B%5D=3,13,38,113,137,323,602,669,759,1042"
-headers = {'freelancer-oauth-v1': 'QXkS2xVNlHJXeST9oAyVaQwOflrAi4'}
+headers = {'freelancer-oauth-v1': '**********'}
 response = requests.request("GET", url, headers=headers)
 data = response.json()
 
@@ -46,7 +46,7 @@ df = pd.DataFrame(extracted_data)
 url = 'https://www.freelancer.com/api/users/0.1/self/jobs' 
 headers = {
     'Content-Type': 'application/json',
-    'freelancer-oauth-v1': 'QXkS2xVNlHJXeST9oAyVaQwOflrAi4'
+    'freelancer-oauth-v1': '***************'
 }
 
 def add_skill(row):
@@ -63,7 +63,7 @@ df.apply(add_skill, axis=1)
 url_bid = 'https://www.freelancer.com/api/projects/0.1/bids/?compact=' 
 headers = {
     'Content-Type': 'application/json',
-    'freelancer-oauth-v1': 'QXkS2xVNlHJXeST9oAyVaQwOflrAi4'
+    'freelancer-oauth-v1': '*****************'
 }
 
 def submit_bid(row):
